@@ -1,6 +1,8 @@
 package com.example.biblioteca.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data //Evita definir los getters y setters
 @Entity
