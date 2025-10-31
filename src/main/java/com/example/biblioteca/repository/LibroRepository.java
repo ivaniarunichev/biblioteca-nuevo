@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface LibroRepository extends JpaRepository<Libro, Long> {
-    @Query(name = "SELECT * FROM libro")
-    List<Libro> listaLibros();
+    /* @Query(name = "SELECT * FROM libro")
+    List<Libro> listaLibros(); */
 }
