@@ -33,4 +33,9 @@ public class LibroServicesImpl implements LibroService{
     public void eliminarLibro(Long id) {
         libroRepository.deleteById(id);
     }
+
+    @Override
+    public void borrarTodos() {
+        libroRepository.deleteAll();
+    }
 }
