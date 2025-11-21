@@ -10,4 +10,6 @@ public interface LibroService {
     Optional<Libro> getLibro(Long id);
     void guardarOActualizarLibro(Libro libro);
     void eliminarLibro(Long id);
+
+    void borrarTodos();
 }

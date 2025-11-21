@@ -30,8 +30,8 @@ public class LibroController {
         this.libroServiceImpl.guardarOActualizarLibro(libro);
     }
 
-    @DeleteMapping
-    void eliminarLibro(@PathVariable("libroid") Long libroid){
-        this.libroServiceImpl.eliminarLibro(libroid);
+    @DeleteMapping("/{id}")
+    public void eliminarLibro(@PathVariable Long id) {
+        libroServiceImpl.eliminarLibro(id);
     }
 }
