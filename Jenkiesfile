@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Show messages'){
             steps {
-                bat echo 'Primer stage del pipeline'
+                bat 'echo Primer stage del pipeline'
             }
         }
     }
