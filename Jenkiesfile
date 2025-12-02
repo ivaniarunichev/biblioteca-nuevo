@@ -9,20 +9,6 @@ pipeline {
     stages {
         stage('Show messages'){
             steps {
-<<<<<<< HEAD
-                echo "Primer stage del pipeline"
-            }
-        }
-        stage('Checkout proyecto'){
-                            steps {
-                                git branch: 'main',
-                                    url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
-                            }
-                }
-    }
-
-}
-=======
                 echo 'Primer stage del pipeline'
                 echo 'A continuacion hacemos checkout del proyecto'
             }
@@ -36,4 +22,3 @@ pipeline {
         }
     }
 }
->>>>>>> 48f5256ebd78359c0830477f72c27682cf4a6bd3
