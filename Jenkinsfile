@@ -20,5 +20,11 @@ pipeline {
                     url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
                 }
         }
+
+        stage('Maven clean'){
+            steps{
+                mvn clean
+            }
+        }
     }
 }
