@@ -17,7 +17,7 @@ pipeline {
         stage('Checkout proyecto'){
                     steps {
                         git branch: 'master',
-                            git: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
+                            url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
                     }
         }
     }
