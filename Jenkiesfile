@@ -9,8 +9,15 @@ pipeline {
     stages {
         stage('Show messages'){
             steps {
-                bat 'echo "Primer stage del pipeline"'
+                echo "Primer stage del pipeline"
             }
         }
+        stage('Checkout proyecto'){
+                            steps {
+                                git branch: 'main',
+                                    url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
+                            }
+                }
     }
+
 }
