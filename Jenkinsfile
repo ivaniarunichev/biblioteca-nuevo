@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Maven clean'){
             steps {
-                bat 'mvn clean'
+                bat 'mvnw.cmd clean'
             }
         }
     }
