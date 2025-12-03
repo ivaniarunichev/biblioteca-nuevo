@@ -23,7 +23,12 @@ pipeline {
 
         stage('Maven clean'){
             steps{
-                bat 'mvn clean'
+                script {
+                    // Obtener la ruta de Maven configurada en Jenkins
+                    def mvnHome = tool 'Maven3.9.11'
+                    // Ejecutar Maven con la ruta completa
+                    bat "\"${mvnHome}\\bin\\mvn\" clean"
+                }
             }
         }
     }
