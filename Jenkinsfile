@@ -1,11 +1,9 @@
 pipeline {
     agent any
-
     tools {
         jdk 'jdk-17'
         maven 'Maven3.9.11'
     }
-
     stages {
         stage('Show messages'){
             steps {
@@ -13,17 +11,15 @@ pipeline {
                 echo 'A continuacion hacemos checkout del proyecto'
             }
         }
-
         stage('Checkout proyecto'){
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
-                }
+                url: 'https://github.com/ivaniarunichev/biblioteca-nuevo.git'
+            }
         }
-
         stage('Maven clean'){
-            steps{
-                bat 'mvn clean'
+            steps {
+                bat 'mvn clean package'
             }
         }
     }
