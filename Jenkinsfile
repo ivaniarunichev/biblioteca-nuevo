@@ -21,9 +21,9 @@ pipeline {
                 }
         }
 
-        stage('Maven clean'){
+        stage('Maven install'){
             steps{
-                bat 'mvn clean -B -U'
+                bat 'mvn install'
             }
         }
 
