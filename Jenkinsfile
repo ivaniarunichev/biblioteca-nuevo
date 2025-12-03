@@ -23,8 +23,7 @@ pipeline {
 
         stage('Maven clean'){
             steps{
-                bat 'mvn --version'
-                bat 'mvn clean'
+                bat '%MAVEN_HOME%\\bin\\mvn clean'
             }
         }
     }
