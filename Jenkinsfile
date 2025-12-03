@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         jdk 'jdk-17'
-        maven 'maven3.9.11'
+        maven 'Maven3.9.11'
     }
     stages {
         stage('Show messages'){
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Maven clean'){
             steps {
-                mvn clean
+                sh 'mvn clean'
             }
         }
     }
