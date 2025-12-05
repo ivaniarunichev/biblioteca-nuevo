@@ -30,11 +30,11 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-        stage ('Crear directorio'){
+        /*stage ('Crear directorio'){
             steps{
                 bat 'mkdir v%VERSION_BACK%'
             }
-        }
+        }*/
         stage ('Mover JAR'){
             steps {
                 bat 'xcopy /Y ".\\target\\*.jar" ".\\v%VERSION_BACK%"'
@@ -52,13 +52,13 @@ pipeline {
             }
         }
 
-        stage('Deploy'){
+        /*stage('Deploy'){
             steps {
                 bat """
                     echo "Starting deploy.stage.steps..."
                     java -jar target/biblioteca-${VERSION_BACK}.jar
                 """
             }
-        }
+        }*/
     }
 }
