@@ -27,7 +27,7 @@ pipeline {
 
         stage('Comandos Maven'){
             steps {
-                bat 'mvn clean'
+                bat 'mvn clean package'
             }
         }
         stage ('Crear directorio'){
@@ -38,6 +38,17 @@ pipeline {
         stage ('Mover JAR'){
             steps {
                 bat 'xcopy /Y ".\\target\\*.jar" ".\\v%VERSION_BACK%"'
+            }
+            post{
+                success {
+                    bat 'echo "Después del copiar los ficheros correctamente"'
+                }
+                failure {
+                    bat 'echo "ERROR copiando los ficheros"'
+                }
+                always {
+                    bat 'echo "Se ejecuta siempre tras del stage Copiar ficheros"'
+                }
             }
         }
     }
