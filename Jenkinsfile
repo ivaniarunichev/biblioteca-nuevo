@@ -30,16 +30,14 @@ pipeline {
                 bat 'mvn clean'
             }
         }
-
-        //stage('Crear directorio'){
-            //steps{
-              //bat 'mkdir v%VERSION_BACK%'
-            //}
-        //}
-
+        stage ('Crear directorio'){
+            steps{
+                bat 'mkdir v%VERSION_BACK%'
+            }
+        }
         stage ('Mover JAR'){
             steps {
-                bat 'copy target\\*.jar v%VERSION_BACK%\\'
+                bat 'xcopy /Y ".\\target\*.jar" ".v%VERSION_BACK%"'
             }
         }
     }
