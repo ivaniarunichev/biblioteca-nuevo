@@ -31,11 +31,11 @@ pipeline {
             }
         }
 
-        stage('Crear directorio'){
-            steps{
-                bat 'mkdir v%VERSION_BACK%'
-            }
-        }
+        //stage('Crear directorio'){
+            //steps{
+              //bat 'mkdir v%VERSION_BACK%'
+            //}
+        //}
 
         stage ('Mover JAR'){
             steps {
