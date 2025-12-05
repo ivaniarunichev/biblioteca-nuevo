@@ -37,7 +37,7 @@ pipeline {
         }
         stage ('Mover JAR'){
             steps {
-                bat 'xcopy /Y ".\\target\*.jar" ".v%VERSION_BACK%"'
+                bat 'xcopy /Y ".\\target\\*.jar" ".\\v%VERSION_BACK%"'
             }
         }
     }
